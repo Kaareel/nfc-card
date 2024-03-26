@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import CreatorCard from "./components/CreatorCard";
+import Description from "./components/Description";
+import Image from "./components/Image";
+import List from "./components/List";
+import Title from "./components/Title";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="bg-bgColor h-screen flex justify-center items-center">
+      <div className="max-w-xs flex flex-col justify-center items-center p-6 bg-bgCard rounded-2xl shadow-3xl  ">
+        <a href="/NFC.jpg" >
+          <Image/>
         </a>
-      </header>
+        <div className="pt-6 font-light leading-relaxed font-Outfit">
+          <Title title="Equilibrium #3429"/>
+          <Description description="Our Equilibrium collection promotes balance and calm."/>
+          <List prices={0.041} time={3} date="days left"/>
+          <CreatorCard name="Shimuelo"/>
+        </div>
+      </div>
     </div>
   );
 }
